@@ -1,0 +1,623 @@
+/* ======================== CSS Reset ======================== */
+*{
+    margin : 0;
+    padding: 0;
+    outline : none;
+    box-sizing: border-box;
+    font-family : "Raleway-Regular";
+    scroll-behavior: smooth;
+}
+
+p{
+    font-family : "Raleway-Medium";
+    font-size : 1.4rem;
+    line-height: 2.3rem;
+    word-spacing: 0.5rem;
+}
+
+section{
+    padding : 3rem 4rem 1rem;
+}
+
+a{
+    cursor : pointer;
+}
+/* ============================================================ */
+
+
+/* ======================== Colors ========================== */
+:root {
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#ffffff;
+    --footer:#2D333F;
+}
+/* ============================================================ */
+
+
+/* ======================== FONTS ======================== */
+@font-face{
+    font-family : "Raleway-Regular";
+    src : url('../Fonts/Raleway/static/Raleway-Regular.ttf');
+}
+
+@font-face{
+    font-family : "Raleway-Medium";
+    src : url('../Fonts/Raleway/static/Raleway-Medium.ttf');
+}
+
+@font-face{
+    font-family : "RocknRollOne-Regular";
+    src : url('../Fonts/RocknRoll_One/RocknRollOne-Regular.ttf');
+}
+
+@font-face{
+    font-family : "Lobster";
+    src : url('../Fonts/Lobster/Lobster-Regular.ttf');
+}
+/* ============================================================ */
+
+
+
+/* =================== Utility Classes Start ================== */
+.flex{
+    display : flex;
+}
+
+.items-center{
+    align-items : center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-around{
+    justify-content: space-around;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.flex1{
+    flex : 1;
+}
+
+.flex2{
+    flex : 2;
+}
+
+.flex-wrap{
+    flex-wrap : wrap;
+}
+
+.section-heading{
+    font-family: "Lobster";
+    margin-bottom: 3rem;
+    text-align : center;
+    font-size : 3rem;
+    color : #1f40fa;
+    letter-spacing: .3rem;
+}
+
+.section-heading span{
+    font-family: "Lobster";
+    color : rgb(182, 7, 7);
+}
+/* =================== Utility Classes End ================== */
+
+
+
+/* ====================== Navbar Start ====================== */
+nav.top{
+    background: yellow;
+    width : 100vw;
+    position : fixed;
+    z-index : 1000;
+    padding : 0 2rem;
+    box-shadow : 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+nav.top ul{
+    margin-left: auto;
+    list-style  :none;
+}
+
+nav.top ul li a{
+    text-decoration : none;
+    padding : 0.5rem 1rem;
+    font-family : "RocknRollOne-Regular";
+    cursor : pointer;
+    font-size: 1.1rem;
+    color : blue;
+    position : relative;
+    outline: none;
+    line-height : 4rem;
+}
+
+nav.top ul li a::before,
+nav.top ul li a::after{
+    height : 14px;
+    width : 14px;
+    position : absolute;
+    content : '';
+    transition: all .35s ease;
+    opacity : 0;
+}
+
+nav.top ul li a::before{
+    left : 0;
+    top : 0;
+    border-left: 3px solid #c0392b;
+    border-top: 3px solid #c0392b;
+    transform : translate(100%, 50%);
+    -webkit-transform : translate(100%, 50%);
+}
+
+nav.top ul li a::after{
+    right : 0;
+    bottom : 0;
+    border-right: 3px solid #c0392b;
+    border-bottom: 3px solid #c0392b;
+    transform : translate(-100%, -50%);
+    -webkit-transform : translate(-100%, -50%);
+}
+
+nav.top ul li a:hover::before,
+nav.top ul li a:hover::after{
+    transform : translate(0%, 0%);
+    -webkit-transition : translate(0%, 0%);
+    opacity : 1;
+}
+
+.toggle-button{
+    width : 30px;
+    height : 20px;
+    position: absolute;
+    right : 0;
+    margin : 1.5rem 2.5rem;
+    display: none;
+}
+
+nav.top .toggle-button .line{
+    width : 100%;
+    height : 4px;
+    background-color: #0e2588;
+    border-radius: 50%;
+}
+
+/* ====================== Navbar End ====================== */
+
+
+
+/* ====================== Nav Banner Start ====================== */
+header.banner{
+    width : 100%;
+    height : 70vh;
+    background: #dfe433;
+    padding-top : 60px;
+}
+
+header.banner .flex .logo *{
+    font-family: "Lobster";
+}
+
+header.banner .flex .logo h1{
+    font-size : 6rem;
+    margin-bottom: 0rem;
+    color : rgb(184, 8, 8);
+    text-shadow:.3rem .3rem white;
+}
+
+header.banner .flex .logo h3{
+    font-size : 4rem;
+    margin-left : 130px;
+    position : relative;
+    transform: translateY(-20px);
+}
+
+header.banner .flex .imgcontainer{
+    height : 250px;
+    width: 50vw;
+    position : relative
+}
+
+header.banner .flex .img-wrapper{
+    height : 100%;
+    width : 100%;
+    position : absolute;
+    background : #dfe433;
+    -webkit-animation-name: imgchanger;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 22s;
+    -webkit-animation-direction: alternate;
+}
+
+header.banner .flex .img-wrapper img{
+    height : 100%;
+    position : absolute;
+}
+
+@keyframes imgchanger{
+    0%{     opacity : 1;    }
+    8%{    opacity : 0;    }
+    75%{    opacity : 0;    }
+    100%{   opacity : 1;    }
+}
+
+header.banner .flex .imgcontainer .img-wrapper:nth-child(1){
+    animation-delay: 20s;
+}
+
+header.banner .flex .imgcontainer .img-wrapper:nth-child(2){
+    animation-delay: 16s;
+}
+
+header.banner .flex .imgcontainer .img-wrapper:nth-child(3){
+    animation-delay: 12s;
+}
+
+header.banner .flex .imgcontainer .img-wrapper:nth-child(4){
+    animation-delay: 8s;
+}
+
+header.banner .flex .imgcontainer .img-wrapper:nth-child(5){
+    animation-delay: 4s;
+}
+
+/* ====================== Nav Banner End ====================== */
+
+
+
+/* ======================= About Us Section Start ====================== */
+section.about{
+    background: var(--pure);
+    position: relative;
+}
+
+section.about .about-wrapper .cover{
+    height : 320px;
+    width : 320px;
+    min-width : 300px;
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    background: linear-gradient(60deg, #ca41ece0 0%, #1f40fa 49%, rgb(73, 156, 252) 100%);
+    position : relative;
+}
+
+section.about .about-wrapper > div{
+    margin : 0rem auto;
+}
+
+section.about .about-wrapper .cover .img-wrapper{
+    height : 92%;
+    width : 92%;
+    padding : 1rem;
+    position : relative;
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    background : radial-gradient(white, rgb(243, 243, 201), rgb(236, 236, 128));
+}
+
+section.about .about-wrapper .cover .img-wrapper img{
+    position : absolute;
+    height : 90%;
+    transform : translate(1rem, 1rem);
+}
+
+section.about .about-wrapper p{   
+    font-style: italic;
+    text-align : justify;
+    margin : 2rem;
+}
+
+section.about .about-wrapper p span{
+    font-family : "RocknRollOne-Regular";
+}
+
+section.about .box{
+    position : absolute;
+    width : 18px;
+    height : 18px;
+    border-radius : 50%;
+    border : 1px solid crimson;
+    animation : animate 6s ease-in-out infinite;
+    opacity : 0;
+}
+
+section.about .box:nth-child(3){
+    left : 20%;
+    top : 20%;
+    animation-delay : 4s;
+}
+
+section.about .box:nth-child(4){
+    left : 35%;
+    top : 10%;
+    animation-delay : 6s;
+}
+
+section.about .box:nth-child(5){
+    right : 30%;
+    top : 20%;
+    animation-delay : 8s;
+}
+
+section.about .box:nth-child(6){
+    right : 18%;
+    bottom : 10%;
+    animation-delay : 10s;
+}
+
+section.about .box:nth-child(7){
+    top : 10%;
+    right : 15%;
+    animation-delay : 12s;
+}
+
+section.about .box:nth-child(8){
+    bottom : 20%;
+    left : 35%;
+    animation-delay : 14s;
+}
+
+section.about .box:nth-child(9){
+    top : 30%;
+    right : 10%;
+    animation-delay : 16s;
+}
+
+section.about .box:nth-child(10){
+    top : 30%;
+    left : 7%;
+    animation-delay : 18s;
+}
+
+@keyframes animate{
+    0%{
+        transform : scale(0);
+        opacity : 0;
+    }
+    10%{
+        opacity : 1;
+    }
+    100%{
+        transform : scale(5);
+        opacity : 0;
+    }
+}
+/* ======================= About Us Section End ====================== */
+
+
+
+/* =================== OUR Services Section Start ==================== */
+section.services{
+    background: linear-gradient(to left bottom, #0f2aa6, #75179f, #aa0090, #d0007d, #eb1267);
+}
+
+section.services h1{
+    color : white;
+}
+
+section.services > h1 span{
+    color : yellow;
+}
+
+section.services .content .service-card{
+    width : 340px;
+    min-width : 250px;
+    margin : 0rem 2rem 4rem;
+    background : radial-gradient(white, rgb(243, 243, 201), rgb(236, 236, 128));
+    transition : all .3s linear;
+    padding : 15px 15px 0;
+    box-shadow: 0px 0px 8px 2px black;
+}
+
+section.services .content .service-card:hover{
+    transform: scale(0.96);
+    background: linear-gradient(to left bottom, #0f2aa6, #75179f, #aa0090, #d0007d, #eb1267);
+    box-shadow: 0px 0px 5px 5px var(--pure);
+    color : white;
+}
+
+section.services .content .service-card .service-img{
+    position : relative;
+    height : 300px;
+    box-shadow: 0px 0px 2px 2px black;
+}
+
+section.services .content .service-card .service-img img{
+    position : absolute;
+    top : 0;
+    left : 0;
+    height : 100%;
+    width : 100%;
+    object-fit: cover;
+}
+
+section.services .content .service-card .service-name{
+    padding : 1rem 0;
+    text-align: center;
+}
+
+section.services .content .service-card .service-name h2{
+    font-family : "RocknRollOne-Regular";
+}
+/* =================== OUR Services Section End ==================== */
+
+
+/* =================== Contact Us Section Start ==================== */
+section.contact{
+    padding : 0rem;
+}
+
+section.contact .contact-info-wrapper{
+    padding : 3rem 0;
+    background : radial-gradient(white, rgb(243, 243, 201), rgb(236, 236, 128));
+}
+
+section.contact .contact-info-wrapper .contact-info > div >div{
+    margin-bottom: 2rem;
+    color : rgba(119, 55, 13, 0.959);
+}
+
+section.contact .contact-info-wrapper .contact-info > div >div:last-child{
+    margin : 0rem;
+}
+
+section.contact .contact-info-wrapper .contact-info > div >div img{
+    margin-right : 1rem;
+}
+
+section.contact .contact-info-wrapper .contact-info > div > div > div h2{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+section.contact .map{
+    filter:grayscale(40%);
+}
+/* =================== Contact Us Section End ==================== */
+
+
+
+/* =================== Footer Section Start ==================== */
+section.footer{
+    background: rgba(0, 0, 0, 0.9);
+    color : white;
+    padding: 0rem;
+    letter-spacing: .2rem;
+    line-height: 2rem;
+}
+
+section.footer .top{
+    padding : 2rem 5rem;
+}
+
+section.footer .top .box{
+    text-align : center;
+    margin : 2rem 0;
+}
+
+section.footer .top .box h3{
+    margin-bottom : 1rem;
+    padding: 0rem 2rem 1rem 2rem;
+    color : yellow;
+    font-size : 1.3rem;
+    font-family : "RocknRollOne-Regular";
+    border-bottom: 2px solid orange;
+}
+
+section.footer .top .box ul li{
+    list-style: none;
+    margin : 0rem auto 0.4rem;
+    font-size : 1.2rem;
+    font-weight: 600;
+}
+
+section.footer .top .box ul li a{
+    text-decoration : none;
+    color : white;
+    transition: all 0.3s ease;
+}
+
+section.footer .top .box ul li a:hover{
+    text-shadow : 0.2rem 0.2rem .8rem rgb(236, 236, 128);
+}
+
+section.footer .top .box .foot-link img{
+    margin-right: 1rem;
+    height : 1rem;
+    width : 1rem;
+}
+
+section.footer .bottom{
+    box-shadow : 0px -1px 10px white;
+    padding : 0.5rem 2rem;
+    background: rgba(12, 3, 3, 0.774);
+}
+
+section.footer .bottom h3{
+    text-align: center;
+}
+
+section.footer .bottom h3 span{
+    font-family : "Lobster";
+    font-style: italic;
+    letter-spacing: .2rem;
+    font-size : 1.5rem;
+    color : yellow;
+    margin-left : .2rem;
+}
+/* =================== Footer Section End ==================== */
+
+.item-section{
+    padding-top : 60px;
+}
+
+
+/* =============================================================== */
+/*                           Media Query                           */
+/* =============================================================== */
+@media(max-width : 960px){
+    header.banner .flex .imgcontainer, header.banner .flex .logo{
+        transform: scale(0.8);
+    }
+
+    section.footer .top{
+        flex-direction: column;
+    }
+}
+
+@media(max-width : 800px){
+    section.about .about-wrapper{
+        flex-direction: column;
+    }
+
+    section.footer .bottom{
+        flex-direction: column;
+    }
+}
+
+@media(max-width : 710px){ 
+    .navbar{
+        visibility: hidden;
+    }
+
+    .toggle-button{
+        display: flex;
+        cursor : pointer;
+    }
+    
+    .toggler{
+        flex-direction: column;
+        align-items: center;
+        width : 100%;
+        padding : 0.5rem;
+        margin-top : 2.5rem;
+        display : flex;
+        visibility : visible;
+    }
+
+    section.about{
+        padding : 2rem 0;
+    }
+
+    section.about .about-wrapper .cover{
+        transform : scale(0.9);
+    }
+
+    .contact{
+        flex-direction: column;
+    }
+
+    .banner>div:last-child{
+        display :none;
+    }
+}
+
+/* =================== Media Query END ====================== */
