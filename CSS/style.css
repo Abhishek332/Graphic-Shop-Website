@@ -128,6 +128,10 @@ nav.top ul{
     list-style  :none;
 }
 
+nav.top ul li{
+    padding : 20px;
+}
+
 nav.top ul li a{
     text-decoration : none;
     padding : 0.5rem 1rem;
@@ -137,7 +141,6 @@ nav.top ul li a{
     color : blue;
     position : relative;
     outline: none;
-    line-height : 4rem;
 }
 
 nav.top ul li a::before,
@@ -198,7 +201,7 @@ nav.top .toggle-button .line{
 /* ====================== Nav Banner Start ====================== */
 header.banner{
     width : 100%;
-    height : 500px;
+    height : 70vh;
     background: #dfe433;
     padding-top : 60px;
 }
@@ -617,6 +620,13 @@ section.footer .bottom h3 span{
 
     .banner>div:last-child{
         display :none;
+    }
+}
+
+@media(max-width : 500px){
+    nav.top ul li a::before,
+    nav.top ul li a::after{
+        display : none;
     }
 }
 
