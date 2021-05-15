@@ -129,7 +129,7 @@ nav.top ul{
 }
 
 nav.top ul li{
-    padding : 20px;
+    padding : 20px 10px;
 }
 
 nav.top ul li a{
@@ -201,9 +201,8 @@ nav.top .toggle-button .line{
 /* ====================== Nav Banner Start ====================== */
 header.banner{
     width : 100%;
-    height : 70vh;
     background: #dfe433;
-    padding-top : 60px;
+    padding : 120px 0 60px 0;
 }
 
 header.banner .flex .logo *{
@@ -412,7 +411,7 @@ section.services > h1 span{
 
 section.services .content .service-card{
     width : 340px;
-    min-width : 250px;
+    min-width : 300px;
     margin : 0rem 2rem 4rem;
     background : radial-gradient(white, rgb(243, 243, 201), rgb(236, 236, 128));
     transition : all .3s linear;
@@ -586,7 +585,7 @@ section.footer .bottom h3 span{
     }
 }
 
-@media(max-width : 710px){ 
+@media(max-width : 650px){ 
     .navbar{
         visibility: hidden;
     }
@@ -606,6 +605,12 @@ section.footer .bottom h3 span{
         visibility : visible;
     }
 
+
+    nav.top ul li a::before,
+    nav.top ul li a::after{
+        display : none;
+    }
+
     section.about{
         padding : 2rem 0;
     }
@@ -618,15 +623,14 @@ section.footer .bottom h3 span{
         flex-direction: column;
     }
 
-    .banner>div:last-child{
-        display :none;
+    .banner{
+        flex-direction: column;
+        padding : 80px 0 20px 0;
+        }
     }
-}
 
-@media(max-width : 500px){
-    nav.top ul li a::before,
-    nav.top ul li a::after{
-        display : none;
+    header.banner .flex .imgcontainer{
+        width : 100%;
     }
 }
 
