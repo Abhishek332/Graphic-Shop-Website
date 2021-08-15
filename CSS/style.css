@@ -486,6 +486,32 @@ section.contact .map{
 /* =================== Contact Us Section End ==================== */
 
 
+/* ============================= My Advertisement =========================== */
+.my-ad{
+    height : 425px;
+    width : 100%;
+    background : url('../Images/my-ad.png') center center/contain no-repeat;
+    position : relative;
+}
+
+.my-ad .whatsapp{
+    background : rgb(2, 61, 139);
+    border-radius: 5px;
+    border : none;
+    padding : 10px 15px;
+    font-size : 20px;
+    font-weight : bold;
+    color : white;
+    position : absolute;
+    bottom : 20px;
+    left : 33%;
+}
+
+.my-ad .whatsapp:hover{
+    background : rgba(3, 76, 172, 0.609);
+}
+/* ====================================================================== */
+
 
 /* =================== Footer Section Start ==================== */
 section.footer{
@@ -573,6 +599,10 @@ section.footer .bottom h3 span{
     section.footer .top{
         flex-direction: column;
     }
+
+    .my-ad{
+        height : 350px;
+    }
 }
 
 @media(max-width : 800px){
@@ -582,6 +612,10 @@ section.footer .bottom h3 span{
 
     section.footer .bottom{
         flex-direction: column;
+    }
+
+    .my-ad{
+        height : 290px;
     }
 }
 
@@ -631,6 +665,22 @@ section.footer .bottom h3 span{
 
     header.banner .flex .imgcontainer{
         width : 100%;
+    }
+
+    .my-ad{
+        height : 240px;
+    }
+}
+
+@media(max-width : 475px){ 
+    .my-ad{
+        height :200px;
+    }
+}
+
+@media(max-width : 400px){ 
+    .my-ad{
+        height :150px;
     }
 }
 
